@@ -37,8 +37,7 @@ def test_stream(args):
                   save_adaptation_state_filename=args.save_adaptation_state,
                   send_adaptation_state_filename=args.send_adaptation_state, )
     ws.connect()
-    result = ws.wait_wsclose()
-    ws.close()
+    result = ws.get_full_hyp()
 
 
 def test_onetime(args):
